@@ -25,3 +25,13 @@ This document will show you how to get everything set up to contribute and build
  git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
  ```
 
+3. Set submodules so they can be modified
+
+ ```
+ cd ../Documents
+ git checkout main
+ cd ../Server
+ git checkout main
+ cd ../Client
+ git checkout main
+ ```
