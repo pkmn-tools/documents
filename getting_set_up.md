@@ -37,7 +37,11 @@ Navigate to [SSH and GPG keys](https://github.com/settings/keys) within your Git
 ## Cloning and configuring the metarepository
 1. Clone the [metarepository](https://github.com/GDChaoticTCG/GDChaoticTCG)
 
+ Decide on the directory you wish to store the project in (for example, I chose ~/chaotic). If the directory does not already exist, you will need to create the directory and then navigate into it before cloning the repository.
+
  ```
+ mkdir -p /path/to/desired/directory
+ cd /path/to/desired/directory
  GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone --recurse-submodules git@github.com:GDChaoticTCG/GDChaoticTCG.git
  ```
 
@@ -70,9 +74,23 @@ Navigate to [SSH and GPG keys](https://github.com/settings/keys) within your Git
  ```
 
 ## Setting up Godot
-This project relies on the Godot engine. In particular, we rely on [Godot 3.4.2](https://downloads.tuxfamily.org/godotengine/3.4.2/).
+This project relies on the Godot engine. In particular, we rely on Godot 3.4. Currently, the latest revision to 3.4 is [3.4.2](https://downloads.tuxfamily.org/godotengine/3.4.2/). Unless some incompatibility comes up, we will continue to update minor point releases.
 
-You will need to download 
+### Installing the editor
+You will need to download Godot\_v3.4-stable\_linux\_server.64.zip if you plan on testing or deploying Server. Additionally, you should download and install the editor for whatever operating system you use. When the option is available, I recommend using the 64-bit version.
+
+### Configuring the editor
+When you first launch Godot, you will see a Project Manager screen. Follow these steps to import the projects:
+
+1. Click Import
+2. Click Browse
+3. Navigate to the directory you created before you cloned the repository.
+4. Open GDChaoticTCG
+5. Open Server
+6. Double-click "project.godot"
+7. Repeat steps 1-6 for Client instead of Server
+
+Once this is finished, you simply need to choose "Client" or "Server" before clicking "Edit" if you want to make changes to the project
 
 ## Learning
 If you're new to Godot or the other technologies in use for this project, please take a look at [Learning](learning.md). This will have some helpful information for you.
