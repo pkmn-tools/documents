@@ -1,7 +1,40 @@
 # Getting set up
 This document will show you how to get everything set up to contribute and build the project.
 
-## Instructions
+## Setting up a GitHub account and requesting access to the organization
+1. If you have not yet signed up for a GitHub account, you will need to do so. Simply visit [the signup page](https://github.com/signup) and sign up for an account.
+2. Submit a new issue on the [issue tracker for the metarepository](https://github.com/GDChaoticTCG/GDChaoticTCG/issues) with the "access" label and sit tight. If I do not respond within a 48 hours, please hit me up on the [Chaotic Discord](https://discord.gg/chaotic) (username brainard50#3809)
+3. Since this project relies on git to track source code changes, you will need to be familiar with git. There are many resources available for learning how to use git, but I really like [Git Good](https://www.youtube.com/playlist?list=PLlcnQQJK8SUjuzpRx0U-VEUzhmJD7vGbO)
+
+## Installing Git
+### Windows
+Download and install the 64-bit Windows installer from [git-scm.com](https://git-scm.com/download/win). You will end up with a shortcut to a program called "git bash" which will be a terminal that allows you to interact with the git cli. It will also grant you access to all of the other tools necessary for managing a git repository.
+
+### macOS
+Install through [homebrew](https://brew.sh/). You will need to install homebrew if you have not already.
+
+To install through homebrew, run `brew install git` in the terminal
+
+### Linux
+Follow the instructions on [git-scm.com](https://git-scm.com/download/linux) on installing Git for Linux.
+
+## Setting up your GitHub account to use SSH
+
+### Generating an SSH key
+In the past, GitHub relied on the username and password to your GitHub account to authenticate you when submitting changes to a repository. Now it authenticates you via SSH key. In order to create an SSH key, you will need to perform the following steps from a terminal (or git bash if you're on Windows)
+
+`ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+When prompted for a file path, you can hit enter to accept the default path and filename. If you want to save it to a different location or use a different filename, you can do that now. I recommend saving it in the same folder it defaults to, but choose a name specific to your github account. 
+
+When prompted for a passphrase, I strongly recommend providing a unique and complicated passphrase. If your key gets compromised and bad things happen to the organization, I will promptly remove you from the organization and you may not be allowed to contribute in the future.
+
+When this process is complete, you will have two files. For example, if you leave the default file names and paths you will have id\_rsa and id\_rsa.pub.
+
+### Adding your public SSH key to GitHub
+Navigate to [SSH and GPG keys](https://github.com/settings/keys) within your GitHub settings and click "New SSH Key". You can add a title and then paste the contents of the file suffixed by ".pub" to the field labeled "Key" before clicking "Add SSH key" below those fields.
+
+## Cloning and configuring the metarepository
 1. Clone the [metarepository](https://github.com/GDChaoticTCG/GDChaoticTCG)
 
  ```
@@ -35,3 +68,11 @@ This document will show you how to get everything set up to contribute and build
  cd ../Client
  git checkout main
  ```
+
+## Setting up Godot
+This project relies on the Godot engine. In particular, we rely on [Godot 3.4.2](https://downloads.tuxfamily.org/godotengine/3.4.2/).
+
+You will need to download 
+
+## Learning
+If you're new to Godot or the other technologies in use for this project, please take a look at [Learning](learning.md). This will have some helpful information for you.
