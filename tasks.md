@@ -1,9 +1,13 @@
-# Milestone Tasks
+# General Milestone Tasks
 
 ## Abstract
-This document outlines tasks which need to be completed for milestones. Tasks
-are listed by numbers and subsections, but these are just to allow for easy
-reference and do not indicate required task completion order.
+This document outlines tasks to complete before a version will be considered ready for beta testing. It is split into several parts:
+* [Client](tasks_client.md)
+ Tasks specific to Client which do not require changes to be made to any other part of the project
+* [Server](tasks_server.md)
+ Tasks specific to Server which do not require changes to be made to any other part of the project
+* General
+ Tasks which require changes in both Client and Server in order to work. These are outlined in this document.
 
 ## `1.0.0a`
 
