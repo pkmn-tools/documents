@@ -43,28 +43,28 @@ Navigate to [SSH and GPG keys](https://github.com/settings/keys) within your Git
      Decide on the directory you wish to store the projects in (for example, I chose /Users/landon/pokemon/tcg/pkmn.tools/). If the directory does not already exist, you will need to create the directory and then navigate into it before cloning the repositories.
 
      ```
- mkdir -p /path/to/desired/directory
- cd /path/to/desired/directory
- GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/documents.git
- GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/front_end.git
- GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/back_end.git
- GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/server.git
- ```
+     mkdir -p /path/to/desired/directory
+     cd /path/to/desired/directory
+     GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/documents.git
+     GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/front_end.git
+     GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/back_end.git
+     GIT_SSH_COMMAND="ssh -i /path/to/your/ssh/privatekey" git clone git@github.com:pkmn-tools/server.git
+     ```
 
      Note: This may prompt you to enter your password multiple times. This is normal, and do not be surprised if it does not show you anything as you type the password.
 
 2. Configure git to use your private SSH key all the time
 
- Then you will need to configure the repository and all submodules to use your ssh key as well
+     Then you will need to configure the repository and all submodules to use your ssh key as well
 
- ```
- cd /path/to/desired/directory/documents
- git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
- cd /path/to/desired/directory/front_end
- git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
- cd /path/to/desired/directory/back_end
- git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
- cd /path/to/desired/directory/server
- git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
- ```
+     ```
+     cd /path/to/desired/directory/documents
+     git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
+     cd /path/to/desired/directory/front_end
+     git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
+     cd /path/to/desired/directory/back_end
+     git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
+     cd /path/to/desired/directory/server
+     git config core.sshCommand "ssh -i /path/to/your/ssh/privatekey"
+     ```
 
