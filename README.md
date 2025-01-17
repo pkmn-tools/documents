@@ -13,11 +13,8 @@ NOTE: This project is *very* much in the early stages and will not be playable f
 ## Documents
 * [Getting set up](getting_set_up.md) - Read this if you would like instruction on setting your machine up to be able to contribute to this project
 * [Learning](learning.md) - Read this if you would like to learn how to make changes to the project
-* [Documentation structure](documentation_structure.md) - Read this if you would like to learn how the documentation has been structured
-* [Building](building.md) - Read this to learn how to build and deploy the project
+* [Deployment](deployment.md) - Read this to learn how to build and deploy the project
 * [Reporting bugs](reporting_bugs.md) - Read this to learn how to submit bugs in a way that will make it easier to resolve
-* [TODO](TODO.md) - Contains tasks which need to be completed for various version milestones for the client and server
-* [Meta TODO](meta_TODO.md) - Contains tasks that don't have bearing on the client or server directly but still need to be completed
 
 ## Bugs and feature requests
 If you find a bug or would like to request a feature, please submit an issue in the issue tracker.
